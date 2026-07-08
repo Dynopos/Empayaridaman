@@ -90,10 +90,26 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-
 .serv h3{font-size:1.2rem;margin:10px 0 6px}
 .serv p{font-size:.88rem;color:#615a50}
 
-.portfolio-cta{background:var(--black);color:#fff;text-align:center}
-.portfolio-cta .eyebrow{color:var(--gold-soft)}
-.portfolio-cta .eyebrow::before,.portfolio-cta .eyebrow::after{background:rgba(255,255,255,.25)}
-.portfolio-cta p{color:#ddd6c9;max-width:560px;margin:0 auto 34px}
+.gallery-sec{background:var(--paper)}
+.gal-category{margin-top:50px}
+.gal-category:first-of-type{margin-top:0}
+.gal-category h3{font-size:1.4rem;color:var(--gold-deep);margin-bottom:16px}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gal-grid button{border:0;padding:0;background:none;cursor:zoom-in;border-radius:4px;overflow:hidden;aspect-ratio:1/1;display:block}
+.gal-grid img{width:100%;height:100%;object-fit:cover;transition:.35s transform}
+.gal-grid button:hover img{transform:scale(1.06)}
+.gal-more{text-align:center;margin-top:50px}
+.gal-more p{color:#615a50;max-width:520px;margin:0 auto 20px}
+.lb-overlay{position:fixed;inset:0;background:rgba(10,8,5,.94);z-index:50;display:none;align-items:center;justify-content:center}
+.lb-overlay.open{display:flex}
+.lb-overlay img{max-width:90vw;max-height:84vh;object-fit:contain;border-radius:4px}
+.lb-close{position:absolute;top:20px;right:26px;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer;line-height:1}
+.lb-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+.lb-arrow:hover{background:var(--gold);color:#1a1407}
+.lb-prev{left:18px}.lb-next{right:18px}
+.lb-count{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#ddd6c9;font-size:.78rem;letter-spacing:.08em}
+@media(max-width:900px){.gal-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.gal-grid{grid-template-columns:repeat(2,1fr)}.lb-arrow{width:38px;height:38px;font-size:1.1rem}}
 
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .step{text-align:center;padding:10px}
@@ -258,17 +274,123 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-
   </div>
 </section>
 
-<section class="sec portfolio-cta" id="portfolio">
+<section class="sec gallery-sec" id="portfolio">
   <div class="wrap">
-    <span class="eyebrow solo">Portfolio</span>
-    <h2 class="h-lg">Galeri Projek Kabinet</h2>
-    <p>Ikuti Instagram dan TikTok kami untuk lihat koleksi penuh projek kabinet siap — dapur, wardrobe, TV console dan custom works seluruh Kelantan.</p>
-    <div class="cta-row" style="justify-content:center">
-      <a class="btn btn-gold" href="https://www.instagram.com/empayar_idamankitchen?igsh=amxjOWY2MDF3ZDZy">Lihat di Instagram</a>
-      <a class="btn btn-ghost" href="https://vt.tiktok.com/ZSCFn3kAR/">Lihat di TikTok</a>
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Portfolio</span>
+      <h2 class="h-lg">Galeri Projek Kabinet</h2>
+      <p class="section-sub" style="margin:0 auto">Antara projek sebenar yang telah disiapkan seluruh Kelantan.</p>
+    </div>
+<div class="gal-category"><h3>Wardrobe Sudut Full Height</h3><div class="gal-grid">
+<button type="button" data-i="0"><img src="IMG-20260707-WA0169.jpg" loading="lazy" alt="Wardrobe Sudut Full Height"></button>
+<button type="button" data-i="1"><img src="IMG-20260707-WA0166.jpg" loading="lazy" alt="Wardrobe Sudut Full Height"></button>
+<button type="button" data-i="2"><img src="IMG-20260707-WA0167.jpg" loading="lazy" alt="Wardrobe Sudut Full Height"></button>
+<button type="button" data-i="3"><img src="IMG-20260707-WA0158.jpg" loading="lazy" alt="Wardrobe Sudut Full Height"></button>
+</div></div>
+<div class="gal-category"><h3>Set Meja Solek & Cermin</h3><div class="gal-grid">
+<button type="button" data-i="4"><img src="IMG-20260707-WA0170.jpg" loading="lazy" alt="Set Meja Solek & Cermin"></button>
+<button type="button" data-i="5"><img src="IMG-20260707-WA0168.jpg" loading="lazy" alt="Set Meja Solek & Cermin"></button>
+<button type="button" data-i="6"><img src="IMG-20260707-WA0164.jpg" loading="lazy" alt="Set Meja Solek & Cermin"></button>
+</div></div>
+<div class="gal-category"><h3>Wardrobe Full Wall Putih</h3><div class="gal-grid">
+<button type="button" data-i="7"><img src="IMG-20260707-WA0147.jpg" loading="lazy" alt="Wardrobe Full Wall Putih"></button>
+</div></div>
+<div class="gal-category"><h3>TV Console & Partition Wall</h3><div class="gal-grid">
+<button type="button" data-i="8"><img src="IMG-20260707-WA0154.jpg" loading="lazy" alt="TV Console & Partition Wall"></button>
+<button type="button" data-i="9"><img src="IMG-20260707-WA0152.jpg" loading="lazy" alt="TV Console & Partition Wall"></button>
+<button type="button" data-i="10"><img src="IMG-20260707-WA0137.jpg" loading="lazy" alt="TV Console & Partition Wall"></button>
+<button type="button" data-i="11"><img src="IMG-20260707-WA0130.jpg" loading="lazy" alt="TV Console & Partition Wall"></button>
+<button type="button" data-i="12"><img src="IMG-20260707-WA0156.jpg" loading="lazy" alt="TV Console & Partition Wall"></button>
+</div></div>
+<div class="gal-category"><h3>Kabinet Dapur Teal & Emas</h3><div class="gal-grid">
+<button type="button" data-i="13"><img src="IMG-20260707-WA0139.jpg" loading="lazy" alt="Kabinet Dapur Teal & Emas"></button>
+<button type="button" data-i="14"><img src="IMG-20260707-WA0132.jpg" loading="lazy" alt="Kabinet Dapur Teal & Emas"></button>
+<button type="button" data-i="15"><img src="IMG-20260707-WA0127.jpg" loading="lazy" alt="Kabinet Dapur Teal & Emas"></button>
+<button type="button" data-i="16"><img src="IMG-20260707-WA0125.jpg" loading="lazy" alt="Kabinet Dapur Teal & Emas"></button>
+<button type="button" data-i="17"><img src="IMG-20260707-WA0121.jpg" loading="lazy" alt="Kabinet Dapur Teal & Emas"></button>
+<button type="button" data-i="18"><img src="IMG-20260707-WA0123.jpg" loading="lazy" alt="Kabinet Dapur Teal & Emas"></button>
+</div></div>
+<div class="gal-category"><h3>Kabinet Dapur Putih & Gold Arch</h3><div class="gal-grid">
+<button type="button" data-i="19"><img src="IMG-20260707-WA0157.jpg" loading="lazy" alt="Kabinet Dapur Putih & Gold Arch"></button>
+<button type="button" data-i="20"><img src="IMG-20260707-WA0153.jpg" loading="lazy" alt="Kabinet Dapur Putih & Gold Arch"></button>
+<button type="button" data-i="21"><img src="IMG-20260707-WA0155.jpg" loading="lazy" alt="Kabinet Dapur Putih & Gold Arch"></button>
+</div></div>
+<div class="gal-category"><h3>Kabinet Dapur Beige & Kayu</h3><div class="gal-grid">
+<button type="button" data-i="22"><img src="IMG-20260707-WA0150.jpg" loading="lazy" alt="Kabinet Dapur Beige & Kayu"></button>
+<button type="button" data-i="23"><img src="IMG-20260707-WA0151.jpg" loading="lazy" alt="Kabinet Dapur Beige & Kayu"></button>
+</div></div>
+<div class="gal-category"><h3>Kabinet Dapur Shaker Marble Island</h3><div class="gal-grid">
+<button type="button" data-i="24"><img src="IMG-20260707-WA0148.jpg" loading="lazy" alt="Kabinet Dapur Shaker Marble Island"></button>
+<button type="button" data-i="25"><img src="IMG-20260707-WA0149.jpg" loading="lazy" alt="Kabinet Dapur Shaker Marble Island"></button>
+</div></div>
+<div class="gal-category"><h3>Kabinet Dapur Signature</h3><div class="gal-grid">
+<button type="button" data-i="26"><img src="IMG-20260707-WA0142.jpg" loading="lazy" alt="Kabinet Dapur Signature"></button>
+<button type="button" data-i="27"><img src="IMG-20260707-WA0143.jpg" loading="lazy" alt="Kabinet Dapur Signature"></button>
+<button type="button" data-i="28"><img src="IMG-20260707-WA0140.jpg" loading="lazy" alt="Kabinet Dapur Signature"></button>
+<button type="button" data-i="29"><img src="IMG-20260707-WA0134.jpg" loading="lazy" alt="Kabinet Dapur Signature"></button>
+<button type="button" data-i="30"><img src="IMG-20260707-WA0114.jpg" loading="lazy" alt="Kabinet Dapur Signature"></button>
+<button type="button" data-i="31"><img src="IMG-20260707-WA0109.jpg" loading="lazy" alt="Kabinet Dapur Signature"></button>
+</div></div>
+<div class="gal-category"><h3>Kabinet Dapur Glossy Putih</h3><div class="gal-grid">
+<button type="button" data-i="32"><img src="IMG-20260707-WA0120.jpg" loading="lazy" alt="Kabinet Dapur Glossy Putih"></button>
+<button type="button" data-i="33"><img src="IMG-20260707-WA0118.jpg" loading="lazy" alt="Kabinet Dapur Glossy Putih"></button>
+<button type="button" data-i="34"><img src="IMG-20260707-WA0119.jpg" loading="lazy" alt="Kabinet Dapur Glossy Putih"></button>
+<button type="button" data-i="35"><img src="IMG-20260707-WA0116.jpg" loading="lazy" alt="Kabinet Dapur Glossy Putih"></button>
+</div></div>
+<div class="gal-category"><h3>Modern Classic Greige & Dark Wood</h3><div class="gal-grid">
+<button type="button" data-i="36"><img src="IMG-20260707-WA0078.jpg" loading="lazy" alt="Modern Classic Greige & Dark Wood"></button>
+<button type="button" data-i="37"><img src="IMG-20260707-WA0079.jpg" loading="lazy" alt="Modern Classic Greige & Dark Wood"></button>
+<button type="button" data-i="38"><img src="IMG-20260707-WA0080.jpg" loading="lazy" alt="Modern Classic Greige & Dark Wood"></button>
+<button type="button" data-i="39"><img src="IMG-20260707-WA0081.jpg" loading="lazy" alt="Modern Classic Greige & Dark Wood"></button>
+</div></div>
+<div class="gal-category"><h3>Wood Tone & Black Concept</h3><div class="gal-grid">
+<button type="button" data-i="40"><img src="IMG-20260707-WA0083.jpg" loading="lazy" alt="Wood Tone & Black Concept"></button>
+<button type="button" data-i="41"><img src="IMG-20260707-WA0085.jpg" loading="lazy" alt="Wood Tone & Black Concept"></button>
+</div></div>
+<div class="gal-category"><h3>Navy Blue Premium</h3><div class="gal-grid">
+<button type="button" data-i="42"><img src="IMG-20260707-WA0084.jpg" loading="lazy" alt="Navy Blue Premium"></button>
+<button type="button" data-i="43"><img src="IMG-20260707-WA0086.jpg" loading="lazy" alt="Navy Blue Premium"></button>
+</div></div>
+<div class="gal-category"><h3>Minimalist White & Black</h3><div class="gal-grid">
+<button type="button" data-i="44"><img src="IMG-20260707-WA0087.jpg" loading="lazy" alt="Minimalist White & Black"></button>
+<button type="button" data-i="45"><img src="IMG-20260707-WA0088.jpg" loading="lazy" alt="Minimalist White & Black"></button>
+<button type="button" data-i="46"><img src="IMG-20260707-WA0092.jpg" loading="lazy" alt="Minimalist White & Black"></button>
+<button type="button" data-i="47"><img src="IMG-20260707-WA0095.jpg" loading="lazy" alt="Minimalist White & Black"></button>
+</div></div>
+<div class="gal-category"><h3>Glossy White & Wood</h3><div class="gal-grid">
+<button type="button" data-i="48"><img src="IMG-20260707-WA0090.jpg" loading="lazy" alt="Glossy White & Wood"></button>
+<button type="button" data-i="49"><img src="IMG-20260707-WA0091.jpg" loading="lazy" alt="Glossy White & Wood"></button>
+</div></div>
+<div class="gal-category"><h3>Black Luxury Full Glossy</h3><div class="gal-grid">
+<button type="button" data-i="50"><img src="IMG-20260707-WA0093.jpg" loading="lazy" alt="Black Luxury Full Glossy"></button>
+</div></div>
+<div class="gal-category"><h3>Sage Green Premium</h3><div class="gal-grid">
+<button type="button" data-i="51"><img src="IMG-20260707-WA0100.jpg" loading="lazy" alt="Sage Green Premium"></button>
+</div></div>
+<div class="gal-category"><h3>Grey Minimalist</h3><div class="gal-grid">
+<button type="button" data-i="52"><img src="IMG-20260707-WA0101.jpg" loading="lazy" alt="Grey Minimalist"></button>
+</div></div>
+<div class="gal-category"><h3>Scandinavian Wood Modern</h3><div class="gal-grid">
+<button type="button" data-i="53"><img src="IMG-20260707-WA0096.jpg" loading="lazy" alt="Scandinavian Wood Modern"></button>
+<button type="button" data-i="54"><img src="IMG-20260707-WA0097.jpg" loading="lazy" alt="Scandinavian Wood Modern"></button>
+</div></div>
+    <div class="gal-more">
+      <p>Nak lihat lebih banyak? Ikuti Instagram dan TikTok kami untuk koleksi penuh projek kabinet siap.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-gold" href="https://www.instagram.com/empayar_idamankitchen?igsh=amxjOWY2MDF3ZDZy">Lihat di Instagram</a>
+        <a class="btn btn-ghost" href="https://vt.tiktok.com/ZSCFn3kAR/">Lihat di TikTok</a>
+      </div>
     </div>
   </div>
 </section>
+
+<div class="lb-overlay" id="lbOverlay">
+  <button class="lb-close" id="lbClose" aria-label="Tutup">&times;</button>
+  <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Sebelum">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-arrow lb-next" id="lbNext" aria-label="Seterusnya">&#8250;</button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
 
 <section class="sec process" id="process">
   <div class="wrap">
@@ -396,6 +518,74 @@ document.getElementById('sendWa').addEventListener('click',()=>{
   if(msg) text+=` ${msg}`;
   window.open(`https://wa.me/60187780855?text=${encodeURIComponent(text)}`,'_blank');
 });
+
+const galImgs = [
+  {src:"IMG-20260707-WA0169.jpg",cap:"Wardrobe Sudut Full Height"},
+  {src:"IMG-20260707-WA0166.jpg",cap:"Wardrobe Sudut Full Height"},
+  {src:"IMG-20260707-WA0167.jpg",cap:"Wardrobe Sudut Full Height"},
+  {src:"IMG-20260707-WA0158.jpg",cap:"Wardrobe Sudut Full Height"},
+  {src:"IMG-20260707-WA0170.jpg",cap:"Set Meja Solek & Cermin"},
+  {src:"IMG-20260707-WA0168.jpg",cap:"Set Meja Solek & Cermin"},
+  {src:"IMG-20260707-WA0164.jpg",cap:"Set Meja Solek & Cermin"},
+  {src:"IMG-20260707-WA0147.jpg",cap:"Wardrobe Full Wall Putih"},
+  {src:"IMG-20260707-WA0154.jpg",cap:"TV Console & Partition Wall"},
+  {src:"IMG-20260707-WA0152.jpg",cap:"TV Console & Partition Wall"},
+  {src:"IMG-20260707-WA0137.jpg",cap:"TV Console & Partition Wall"},
+  {src:"IMG-20260707-WA0130.jpg",cap:"TV Console & Partition Wall"},
+  {src:"IMG-20260707-WA0156.jpg",cap:"TV Console & Partition Wall"},
+  {src:"IMG-20260707-WA0139.jpg",cap:"Kabinet Dapur Teal & Emas"},
+  {src:"IMG-20260707-WA0132.jpg",cap:"Kabinet Dapur Teal & Emas"},
+  {src:"IMG-20260707-WA0127.jpg",cap:"Kabinet Dapur Teal & Emas"},
+  {src:"IMG-20260707-WA0125.jpg",cap:"Kabinet Dapur Teal & Emas"},
+  {src:"IMG-20260707-WA0121.jpg",cap:"Kabinet Dapur Teal & Emas"},
+  {src:"IMG-20260707-WA0123.jpg",cap:"Kabinet Dapur Teal & Emas"},
+  {src:"IMG-20260707-WA0157.jpg",cap:"Kabinet Dapur Putih & Gold Arch"},
+  {src:"IMG-20260707-WA0153.jpg",cap:"Kabinet Dapur Putih & Gold Arch"},
+  {src:"IMG-20260707-WA0155.jpg",cap:"Kabinet Dapur Putih & Gold Arch"},
+  {src:"IMG-20260707-WA0150.jpg",cap:"Kabinet Dapur Beige & Kayu"},
+  {src:"IMG-20260707-WA0151.jpg",cap:"Kabinet Dapur Beige & Kayu"},
+  {src:"IMG-20260707-WA0148.jpg",cap:"Kabinet Dapur Shaker Marble Island"},
+  {src:"IMG-20260707-WA0149.jpg",cap:"Kabinet Dapur Shaker Marble Island"},
+  {src:"IMG-20260707-WA0142.jpg",cap:"Kabinet Dapur Signature"},
+  {src:"IMG-20260707-WA0143.jpg",cap:"Kabinet Dapur Signature"},
+  {src:"IMG-20260707-WA0140.jpg",cap:"Kabinet Dapur Signature"},
+  {src:"IMG-20260707-WA0134.jpg",cap:"Kabinet Dapur Signature"},
+  {src:"IMG-20260707-WA0114.jpg",cap:"Kabinet Dapur Signature"},
+  {src:"IMG-20260707-WA0109.jpg",cap:"Kabinet Dapur Signature"},
+  {src:"IMG-20260707-WA0120.jpg",cap:"Kabinet Dapur Glossy Putih"},
+  {src:"IMG-20260707-WA0118.jpg",cap:"Kabinet Dapur Glossy Putih"},
+  {src:"IMG-20260707-WA0119.jpg",cap:"Kabinet Dapur Glossy Putih"},
+  {src:"IMG-20260707-WA0116.jpg",cap:"Kabinet Dapur Glossy Putih"},
+  {src:"IMG-20260707-WA0078.jpg",cap:"Modern Classic Greige & Dark Wood"},
+  {src:"IMG-20260707-WA0079.jpg",cap:"Modern Classic Greige & Dark Wood"},
+  {src:"IMG-20260707-WA0080.jpg",cap:"Modern Classic Greige & Dark Wood"},
+  {src:"IMG-20260707-WA0081.jpg",cap:"Modern Classic Greige & Dark Wood"},
+  {src:"IMG-20260707-WA0083.jpg",cap:"Wood Tone & Black Concept"},
+  {src:"IMG-20260707-WA0085.jpg",cap:"Wood Tone & Black Concept"},
+  {src:"IMG-20260707-WA0084.jpg",cap:"Navy Blue Premium"},
+  {src:"IMG-20260707-WA0086.jpg",cap:"Navy Blue Premium"},
+  {src:"IMG-20260707-WA0087.jpg",cap:"Minimalist White & Black"},
+  {src:"IMG-20260707-WA0088.jpg",cap:"Minimalist White & Black"},
+  {src:"IMG-20260707-WA0092.jpg",cap:"Minimalist White & Black"},
+  {src:"IMG-20260707-WA0095.jpg",cap:"Minimalist White & Black"},
+  {src:"IMG-20260707-WA0090.jpg",cap:"Glossy White & Wood"},
+  {src:"IMG-20260707-WA0091.jpg",cap:"Glossy White & Wood"},
+  {src:"IMG-20260707-WA0093.jpg",cap:"Black Luxury Full Glossy"},
+  {src:"IMG-20260707-WA0100.jpg",cap:"Sage Green Premium"},
+  {src:"IMG-20260707-WA0101.jpg",cap:"Grey Minimalist"},
+  {src:"IMG-20260707-WA0096.jpg",cap:"Scandinavian Wood Modern"},
+  {src:"IMG-20260707-WA0097.jpg",cap:"Scandinavian Wood Modern"}
+];
+const lbOverlay=document.getElementById('lbOverlay'),lbImg=document.getElementById('lbImg'),lbCount=document.getElementById('lbCount');
+let lbIndex=0;
+function openLb(i){lbIndex=i;lbImg.src=galImgs[i].src;lbImg.alt=galImgs[i].cap;lbCount.textContent=(i+1)+' / '+galImgs.length;lbOverlay.classList.add('open');}
+function closeLb(){lbOverlay.classList.remove('open');}
+document.querySelectorAll('.gal-grid button').forEach(btn=>btn.addEventListener('click',()=>openLb(parseInt(btn.dataset.i))));
+document.getElementById('lbClose').addEventListener('click',closeLb);
+document.getElementById('lbPrev').addEventListener('click',()=>openLb((lbIndex-1+galImgs.length)%galImgs.length));
+document.getElementById('lbNext').addEventListener('click',()=>openLb((lbIndex+1)%galImgs.length));
+lbOverlay.addEventListener('click',e=>{if(e.target===lbOverlay)closeLb();});
+document.addEventListener('keydown',e=>{if(!lbOverlay.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')openLb((lbIndex-1+galImgs.length)%galImgs.length);if(e.key==='ArrowRight')openLb((lbIndex+1)%galImgs.length);});
 </script>
 </body>
 </html>
